@@ -1,0 +1,358 @@
+
+.container{
+    display: grid;
+    grid-template-columns: 50px auto 50px;
+    grid-template-rows: 225px auto auto auto auto auto;
+    grid-row-gap: 15px;
+}
+header{
+    grid-column: 1/4;
+    grid-row:1;
+    height: 100px;
+}
+
+header img {
+    width: 25em;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+
+}
+.directory img:hover{
+    opacity: 0.5;
+}
+.skip a{
+    background: white;
+    left: 0;
+    padding: 6px;
+    position: absolute;
+    top: -40px   /*Your code here - place 40px higher */;
+    -webkit-transition: top 1s ease-out;
+    transition: top 1s ease-out;
+    z-index: 1;
+  }
+  
+  .skip a:focus{
+    top: 10px;
+  /*Add the selector and rule to move the skip link to the exact top.*/
+  }
+
+a{
+    text-decoration: none;
+    color: #737373;
+}
+.menu-item.is-active a {
+    color: black;
+}
+nav ul{
+    list-style-type: none;
+  }
+
+nav {
+    justify-content: center;
+    font-family: Montserrat;
+    font-style: normal;
+    font-size: 1em;
+    padding: 0;
+    text-align: center;
+    margin: auto;
+    width:100%;
+}
+.navigation li{
+    display: block;
+    text-align: center;
+    padding: 0 1em 0 0;
+    margin: 0;
+    color: black;
+}
+
+h1{
+font-family: Didot;
+font-style: normal;
+font-weight: normal;
+text-align: center;
+font-size: 20px;
+line-height: 23px;
+letter-spacing: 0.2em;
+margin-bottom: 8%;
+}
+
+h2{
+    font-family: Didot;
+    font-style: italic;
+    font-weight: normal;
+    text-align: center;
+    font-size: 18px;
+    line-height: 23px;
+    margin: 15px auto;
+    }
+p {
+    grid-column: 2;
+    grid-row: 3;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+.all p{
+    text-align: left;
+    padding: 0;
+}
+.all h1{
+    margin-top: 35px;
+}
+.all li{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: left;
+}
+
+img{
+    grid-column: 2;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+
+}
+
+footer{
+    grid-column: 1/4;
+    grid-row: 3/ auto;
+}
+.social-buttons{
+    grid-column: 1/4;
+    grid-row: 3/4;
+    margin: 0 3em;
+    padding: 0;
+} 
+svg{
+    width:30px;
+    padding: 10px;
+}
+footer li{
+    display: inline-block;
+    margin: auto;
+    
+}
+footer nav{
+    margin: 50px auto;
+}
+.footer-copyright{
+    text-align: center;
+    padding-bottom: 50px;
+}
+main ul{
+    padding-left: 30px;
+}
+
+
+.travelphotos{
+    height: 100%;
+    padding-bottom: 5%;
+}
+.flip-card img{
+    display: block;
+}
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+    /* border: 1px solid #f1f1f1; */
+  }
+  
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    image-orientation: initial;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front {
+    background-color: transparent;
+    color: black;
+  }
+  
+  /* Style the back side */
+  .flip-card-back {
+    background-color: white;
+    color: black;
+    transform: rotateY(180deg);
+  }
+  .flip-card-back p{
+      text-align: center;
+  }
+.travelphotos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
+}
+.horizontalphotos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-self: center;
+    padding-top: 8%;
+}
+.rowthree {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-self: center;
+}
+.travelphotos .flip-card{
+    width: 300px;
+    height: 500px;
+}
+
+/* .parallax{
+    background-image: url("images/para.png");
+    height: 900px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+
+
+@media screen and (prefers-reduced-motion: reduce){
+    html{
+        scroll-behavior: auto; /* Removes scroll animation */
+    }
+  
+    .skip a{
+      background: white;
+      left: 0;
+      padding: 6px;
+      position: absolute;
+      top: -40px;
+      -webkit-transition: none !important; /* Your code here - set to default setting */
+      transition: none !important; /* Your code here - set to default setting */
+      z-index: 1;
+    }
+  
+    .skip a:focus{
+      top:0;
+    }
+  }
+  @media screen and (min-width: 500px){
+    .navigation li{
+        display: inline-block;
+        text-align: center;
+        padding: 0 1em 0 0;
+        margin: 0;
+        color: black;
+    }
+  }
+  @media screen and (min-width: 800px){
+    .navigation li{
+        display: inline-block;
+        text-align: center;
+        padding: 0 1em 0 0;
+        margin: 0;
+        color: black;
+    }
+    .personal h1{
+        padding-top: 50px;
+    }
+    .michnews{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto 50px;
+        grid-column-gap: 15px;
+    }
+   .michnews img{
+       grid-column: 1;
+       max-width: 450px;
+       display: block;
+    margin-left: auto;
+    margin-right: auto;
+   }
+   .newstext{
+       grid-column: 2;
+       padding: 20px;
+       margin: auto;
+   }
+   .thebettermom{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-column-gap: 15px;
+    grid-row-gap:50px;
+   }
+   .thebettermom a{
+    grid-column: 1;
+    max-width: 450px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+   }
+  .tbmtext {
+    grid-column: 2;
+    padding-top: 30px;
+    margin: auto;
+  }
+  .diy{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-column-gap: 15px;
+  }
+  .diy a{
+    grid-column: 1;
+    max-width: 450px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .diytext{
+    grid-column: 2;
+    padding: 20px;
+    margin: auto;
+      
+  }
+
+
+  /* michnews.html desktop styling */
+  
+  .all img{
+    max-width: 700px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+  .travelphotos .flip-card{
+    width: 300px;
+    height: 300px;
+}
+
+  }
